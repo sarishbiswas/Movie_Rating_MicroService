@@ -1,0 +1,8 @@
+package com.sarish.moviecatalogservice.models;
+import java.util.List;
+
+import lombok.Data;
+@Data
+public class RatingsList {
+	private List<Rating> ratings;
+}

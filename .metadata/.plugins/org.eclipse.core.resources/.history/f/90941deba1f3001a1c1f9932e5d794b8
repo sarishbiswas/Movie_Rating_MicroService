@@ -1,0 +1,9 @@
+package com.sarish.ratingsdataservice.models;
+
+import java.util.List;
+
+public class UserRating {
+	private int userId;
+	private int rating;
+	private int movieId;
+}

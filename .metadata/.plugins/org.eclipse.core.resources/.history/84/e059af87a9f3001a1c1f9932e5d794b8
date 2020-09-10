@@ -1,0 +1,12 @@
+package com.sarish.ratingsdataservice.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import com.sarish.ratingsdataservice.models.UserRating;
+@Repository
+public interface UserRatingRepository extends JpaRepository<UserRating, Integer> {
+	@Query("SELECT r.userId,r.movieId,r.rating FROM UserRating r WHERE r.userId = ?1")
+	UserRating findUserByUserId(Integer userId);
+}

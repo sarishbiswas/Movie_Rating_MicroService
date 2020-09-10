@@ -1,0 +1,26 @@
+package com.sarish.ratingsdataservice.models;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
+@Data
+@Entity
+@NoArgsConstructor
+@Table(name = "userrating")
+public class UserRating {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int number;
+	@Column(name ="userId")
+	private int userId;
+	@Column(name= "movieId")
+	private int movieId;
+	@Column(name="rating")
+	private int rating;
+}

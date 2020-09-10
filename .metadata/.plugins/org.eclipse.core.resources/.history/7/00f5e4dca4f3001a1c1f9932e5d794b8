@@ -1,0 +1,20 @@
+package com.sarish.ratingsdataservice.models;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
+@Data
+@Entity
+@NoArgsConstructor
+@Table(name = "userrating")
+public class UserRating {
+	@Column(name = "userid")
+	private int userId;
+	@Column(name = "rating")
+	private int rating;
+	@Column(name = "movieid")
+	private int movieId;
+}

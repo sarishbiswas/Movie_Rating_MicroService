@@ -1,31 +1,24 @@
 package com.sarish.movieinfoservice.models;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Entity
+@NoArgsConstructor
+@AllArgsConstructor
+@Table(name="movie")
 public class Movie {
-	private String movieId;
-	private String name;
-	public String getMovieId() {
-		return movieId;
-	}
-	public void setMovieId(String movieId) {
-		this.movieId = movieId;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public Movie(String movieId, String name) {
-		super();
-		this.movieId = movieId;
-		this.name = name;
-	}
-	public Movie() {
-		super();
-	}
-	@Override
-	public String toString() {
-		return "Movie [movieId=" + movieId + ", name=" + name + "]";
-	}
+	@Id
+	private int movieId;
+	@Column(name="movieName")
+	private String movieName;
+
 	
 }

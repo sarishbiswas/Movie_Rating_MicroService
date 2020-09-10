@@ -1,24 +1,33 @@
 package com.sarish.ratingsdataservice.models;
 
-import java.util.List;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+@Data
+@Entity
+@NoArgsConstructor
+@Table(name = "userrating")
 public class UserRating {
-	private List<Rating> ratings;
-
-	public List<Rating> getRatings() {
-		return ratings;
-	}
-
-	public void setRatings(List<Rating> ratings) {
-		this.ratings = ratings;
-	}
-
-	public UserRating() {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int number;
+	@Column(name ="userId")
+	private int userId;
+	@Column(name= "movieId")
+	private int movieId;
+	@Column(name="rating")
+	private int rating;
+	public UserRating(int userId, int movieId, int rating) {
 		super();
+		this.userId = userId;
+		this.movieId = movieId;
+		this.rating = rating;
 	}
-
-	public UserRating(List<Rating> ratings) {
-		super();
-		this.ratings = ratings;
-	}
+	
 }

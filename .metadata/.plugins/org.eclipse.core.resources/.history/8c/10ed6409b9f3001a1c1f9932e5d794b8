@@ -1,0 +1,5 @@
+package com.sarish.moviecatalogservice.repository;
+
+public class UserRepository {
+
+}

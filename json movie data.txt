@@ -1,0 +1,75 @@
+    {
+        "movieId": 1,
+        "movieName": "Avengers"
+    },
+    {
+        "movieId": 2,
+        "movieName": "Avengers EndGame"
+    }
+
+////////////////////////////////////////////////////////////////////////
+Ratings Data
+////////////////////////////////////////////////////////////////////////
+
+[
+    {
+        "number": 1,
+        "userId": 1,
+        "movieId": 1,
+        "rating": 4
+    },
+    {
+        "number": 2,
+        "userId": 1,
+        "movieId": 2,
+        "rating": 5
+    },
+    {
+        "number": 3,
+        "userId": 2,
+        "movieId": 1,
+        "rating": 3
+    },
+    {
+        "number": 4,
+        "userId": 2,
+        "movieId": 2,
+        "rating": 5
+    },
+    {
+        "number": 5,
+        "userId": 3,
+        "movieId": 1,
+        "rating": 4
+    },
+    {
+        "number": 6,
+        "userId": 3,
+        "movieId": 2,
+        "rating": 2
+    }
+]
+////////////////////////////////////////////////////////////////////////
+User Details Data
+///////////////////////////////////////////////////////////////////////////
+
+[
+    {
+        "userId": 1,
+        "userName": "Sarish Biswas",
+        "userEmail": "sarisbiswas@gmail.com"
+    },
+    {
+        "userId": 2,
+        "userName": "Anindita Nandy",
+        "userEmail": "trayee96@gmail.com"
+    },
+    {
+        "userId": 3,
+        "userName": "Nisha Dalal",
+        "userEmail": "nisha@gmail.com"
+    }
+]
+
+////////////////////////////////////////////////////////////////////////
+

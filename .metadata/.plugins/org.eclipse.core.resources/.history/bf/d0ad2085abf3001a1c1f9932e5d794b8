@@ -1,0 +1,12 @@
+package com.sarish.ratingsdataservice.models;
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+public class Rating {
+	private int movieId;
+	private int Rating;
+	
+}

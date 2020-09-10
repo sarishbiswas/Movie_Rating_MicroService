@@ -1,0 +1,21 @@
+package com.sarish.ratingsdataservice.models;
+
+import java.util.Map;
+
+import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
+@Data
+@Entity
+@NoArgsConstructor
+@Table(name = "userrating")
+public class UserRating {
+	@Id
+	private int userId;
+	@ElementCollection
+	Map<Integer,Integer> ratings;
+}

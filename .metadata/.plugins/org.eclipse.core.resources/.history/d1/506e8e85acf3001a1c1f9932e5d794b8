@@ -1,0 +1,54 @@
+package com.sarish.ratingsdataservice.resources;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.sarish.ratingsdataservice.models.Rating;
+import com.sarish.ratingsdataservice.models.UserRating;
+import com.sarish.ratingsdataservice.repository.UserRatingRepository;
+
+@RestController
+@RequestMapping("/ratingsdata/users")
+public class RatingsResources {
+	@Autowired
+	private UserRatingRepository repository;
+//	@RequestMapping("/{movieId}")
+//	public Rating getRating(@PathVariable("movieId") String movieId) {
+//		return new Rating(movieId,4);
+//	}
+//	@RequestMapping("/users/{userId}")
+//	public UserRating getUserRating(@PathVariable("userId") String userId) {
+//		List<Rating> ratings = Arrays.asList(
+//				new Rating("1",4),new Rating("2",5)
+//			);
+//		return new UserRating(ratings);
+//	}
+	@RequestMapping("/")
+	public List<UserRating> getUserRating() {
+		return repository.findAll();
+	}
+	@RequestMapping("/add")
+	public String addUserRating() {
+		repository.save(new UserRating(1,1,4));
+		repository.save(new UserRating(1,2,3));
+		repository.save(new UserRating(2,1,4));
+		repository.save(new UserRating(2,2,5));
+		repository.save(new UserRating(3,1,1));
+		repository.save(new UserRating(3,2,5));
+		return "Success";
+	}
+	@RequestMapping("/{userId}")
+	public List<UserRating> showUserAllMovieRating(@PathVariable("userId") int userId) {
+		return repository.findUserByUserId(userId);
+//		List<Rating> ratings = new ArrayList<Rating>();
+//		for(UserRating ur:userRating) {
+//			ratings.add(new Rating(ur.getMovieId(),ur.getRating()));
+//		}
+//		return userRating;
+	}
+}

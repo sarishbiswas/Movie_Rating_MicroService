@@ -1,0 +1,5 @@
+package com.sarish.ratingsdataservice.repository;
+
+public class UserRatingRepository {
+
+}

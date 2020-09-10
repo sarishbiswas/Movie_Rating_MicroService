@@ -1,0 +1,5 @@
+package com.sarish.ratingsdataservice.models;
+
+public class Rating {
+
+}

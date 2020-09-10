@@ -1,0 +1,5 @@
+package com.sarish.movieinfoservice.resources;
+
+public class MovieResource {
+
+}

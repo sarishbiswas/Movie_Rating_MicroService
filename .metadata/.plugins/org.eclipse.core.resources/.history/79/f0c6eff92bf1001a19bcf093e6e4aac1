@@ -1,0 +1,5 @@
+package com.sarish.moviecatelogservice.resources;
+
+public class MovieCatelogResource {
+
+}

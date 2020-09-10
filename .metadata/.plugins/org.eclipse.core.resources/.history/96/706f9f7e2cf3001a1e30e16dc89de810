@@ -1,0 +1,5 @@
+package com.sarish.ratingsdataservice.resources;
+
+public class RatingsResources {
+
+}

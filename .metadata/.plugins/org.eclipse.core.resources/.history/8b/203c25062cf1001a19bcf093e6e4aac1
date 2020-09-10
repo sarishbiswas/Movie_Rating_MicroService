@@ -1,0 +1,10 @@
+package com.sarish.moviecatelogservice.resources;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class MovieCatelogResource {
+	public List<CatalogItem> getCatalog(){
+		
+	}
+}

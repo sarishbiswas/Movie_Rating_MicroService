@@ -11,6 +11,10 @@ public class MovieCatelogServiceApplication {
 	public RestTemplate getRestTemplate() {
 		return new RestTemplate();
 	}
+//	@Bean
+//	public WebClient.Builder getWebClientBuilder(){
+//		return WebClient.builder();
+//	}
 	public static void main(String[] args) {
 		SpringApplication.run(MovieCatelogServiceApplication.class, args);
 	}

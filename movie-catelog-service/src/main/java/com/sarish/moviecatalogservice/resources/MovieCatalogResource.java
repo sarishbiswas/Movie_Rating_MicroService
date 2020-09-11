@@ -27,11 +27,11 @@ public class MovieCatalogResource {
 	public List<CatalogItem> getCatalog(@PathVariable("userId") int userId){
 		UserDetails ud = repository.findById(userId).orElseThrow(() -> new IllegalArgumentException("Not Found"));
 //		System.out.println(ud);
-		RatingsList ratings = restTemplate.getForObject("http://localhost:8083/ratingsdata/users/"+userId, RatingsList.class);
+		RatingsList ratings = restTemplate.getForObject("http://ratings-data-service/ratingsdata/users/"+userId, RatingsList.class);
 //		System.out.println(ratings);
 		List<CatalogItem> ci = new ArrayList<>();
 		for(Rating r:ratings.getRatings()) {
-			Movie movie = restTemplate.getForObject("http://localhost:8082/movies/"+r.getMovieId(), Movie.class);
+			Movie movie = restTemplate.getForObject("http://movie-info-service/movies/"+r.getMovieId(), Movie.class);
 			ci.add(new CatalogItem(ud.getUserName(),movie.getMovieName(),r.getRating()));
 		}
 		return ci;
